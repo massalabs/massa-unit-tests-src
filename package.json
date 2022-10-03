@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
+  "scripts": {
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "build:datastore": "asc assembly/massa/datastore.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/datastore.wasm",
+    "build:op_fn": "asc assembly/massa-sc-runtime/op_fn.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/op_fn.wasm",
+    "build": "run-s build:*"
+  },
+  "devDependencies": {
+    "@massalabs/massa-as-sdk": "../massa-as-sdk",
+    "assemblyscript": "^0.21.2",
+    "json-as": "^0.4.9",
+    "mscl-as-transformer": "^0.0.2",
+    "visitor-as": "^0.10.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
