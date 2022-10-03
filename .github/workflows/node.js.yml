@@ -50,5 +50,8 @@ jobs:
     - name: Copy ts files
       shell: bash
       run: |
-        cp -v assembly/massa/datastore.ts resources/massa/massa-execution-worker/src/tests/wasm/sources/datastore/main.ts
+        ls -alh unit_tests/
+        ls -alh massa/
+        ls -alh ./
+        cp -v unit_tests/assembly/massa/datastore.ts massa/massa-execution-worker/src/tests/wasm/sources/datastore/main.ts
 
