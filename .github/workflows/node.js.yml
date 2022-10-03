@@ -58,6 +58,7 @@ jobs:
         git --no-pager diff
 
     - uses: peter-evans/create-pull-request@v4
-      path: massa
+      with:
+        path: massa
 
 
