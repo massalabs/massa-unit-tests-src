@@ -43,7 +43,7 @@ jobs:
     - name: Checkout massa repo
       uses: actions/checkout@v3
       with:
-        repository: my-org/my-tools
+        repository: massalabs/massa
         path: massa
         ref: prepare_testnet_15
 
