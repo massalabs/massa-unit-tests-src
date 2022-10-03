@@ -54,6 +54,7 @@ jobs:
         ls -alh massa/
         ls -alh ./
         cp -v unit_tests/assembly/massa/datastore.ts massa/massa-execution-worker/src/tests/wasm/sources/datastore/main.ts
+        cd massa
         git --no-pager status
         git --no-pager diff
 
