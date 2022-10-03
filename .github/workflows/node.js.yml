@@ -56,4 +56,6 @@ jobs:
         cp -v unit_tests/assembly/massa/datastore.ts massa/massa-execution-worker/src/tests/wasm/sources/datastore/main.ts
 
     - uses: peter-evans/create-pull-request@v4
+      path: massa
+      
 
