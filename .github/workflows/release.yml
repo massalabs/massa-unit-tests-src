@@ -31,13 +31,14 @@ jobs:
         shell: bash
         run: |
           mkdir massa_unit_tests && cd massa_unit_tests
-          cp -v ../build/massa/datastore.wasm ./
+          cp -v ../build/massa/*.wasm ./
           cp -rv ../assembly/massa ./
           cd ..
-          tar czvf massa_unit_tests_${GITHUB_REF/refs\/tags\//}.tar.gz massa_unit_tests
+          # tar czvf massa_unit_tests_${GITHUB_REF/refs\/tags\//}.tar.gz massa_unit_tests
+          tar czvf massa_unit_tests_main.tar.gz massa_unit_tests
           mkdir massa_sc_runtime_unit_tests && cd massa_sc_runtime_unit_tests
           cp -v ../build/massa-sc-runtime/*.wasm ./
           cp -v ../assembly/massa-sc-runtime/*.ts ./
           cd ..
-          tar czvf massa_sc_runtime_unit_tests_${GITHUB_REF/refs\/tags\//}.tar.gz massa_sc_runtime_unit_tests
+          # tar czvf massa_sc_runtime_unit_tests_main.tar.gz massa_sc_runtime_unit_tests
           ls -alh
