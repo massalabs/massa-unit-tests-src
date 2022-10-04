@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -30,25 +30,40 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
-  open_pr:
 
-    runs-on: ubuntu-latest
+      # - name: Publish
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     files: 'massa_*'
 
-    steps:
-    - name: Checkout massa-unit-tests-src
-      uses: actions/checkout@v3
-      with:
-        path: unit_tests
-
-    - name: Checkout massa repo
-      uses: actions/checkout@v3
-      with:
-        repository: massalabs/massa
-        path: massa
-        ref: prepare_testnet_15
-
-    - name: Copy ts files
-      shell: bash
-      run: |
-        cp -v assembly/massa/datastore.ts resources/massa/massa-execution-worker/src/tests/wasm/sources/datastore/main.ts
-
+#   open_pr:
+#
+#     runs-on: ubuntu-latest
+#
+#     steps:
+#     - name: Checkout massa-unit-tests-src
+#       uses: actions/checkout@v3
+#       with:
+#         path: unit_tests
+#
+#     - name: Checkout massa repo
+#       uses: actions/checkout@v3
+#       with:
+#         repository: massalabs/massa
+#         path: massa
+#         ref: prepare_testnet_15
+#
+#     - name: Copy ts files
+#       shell: bash
+#       run: |
+#         ls -alh unit_tests/
+#         ls -alh massa/
+#         ls -alh ./
+#         cp -v unit_tests/assembly/massa/datastore.ts massa/massa-execution-worker/src/tests/wasm/sources/datastore/main.ts
+#         cd massa
+#         git --no-pager status
+#         git --no-pager diff
+#
+#     - uses: peter-evans/create-pull-request@v4
+#       with:
+#         path: massa
