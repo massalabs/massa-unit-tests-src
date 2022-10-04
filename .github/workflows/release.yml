@@ -40,5 +40,5 @@ jobs:
           cp -v ../build/massa-sc-runtime/*.wasm ./
           cp -v ../assembly/massa-sc-runtime/*.ts ./
           cd ..
-          # tar czvf massa_sc_runtime_unit_tests_main.tar.gz massa_sc_runtime_unit_tests
+          tar czvf massa_sc_runtime_unit_tests_main.tar.gz massa_sc_runtime_unit_tests
           ls -alh
