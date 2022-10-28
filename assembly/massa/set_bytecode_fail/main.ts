@@ -10,6 +10,6 @@
 import {fileToBase64, Storage} from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
-    const bytes = fileToBase64("../../../build/massa/smart-contract.wasm");
+    const bytes = fileToBase64("./build/massa/smart-contract.wasm");
     Storage.setBytecode(bytes.toString());
 }
