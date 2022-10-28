@@ -18,6 +18,7 @@
     "build_:nested_call_1": "asc assembly/massa/nested_call/test.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/test.wasm",
     "build_:nested_call_2": "asc assembly/massa/nested_call/main.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/nested_call.wasm",
     "build:nested_call": "run-s build_:nested_call_*",
+    "build:use_builtins": "asc assembly/massa/use_builtins/main.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/use_builtins.wasm",
     "build:rt:caller": "asc assembly/massa-sc-runtime/caller.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/caller.wasm",
     "build:rt:caller_no_return": "asc assembly/massa-sc-runtime/caller_no_return.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/caller_no_return.wasm",
     "build_:rt:create_sc_1": "asc assembly/massa-sc-runtime/get_string.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/get_string.wasm",
@@ -30,6 +31,7 @@
     "build_:rt:send_message_2": "asc assembly/massa-sc-runtime/send_message.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/send_message.wasm",
     "build:rt:send_message": "run-s build_:rt:send_message_*",
     "build:rt:op_fn": "asc assembly/massa-sc-runtime/op_fn.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/op_fn.wasm",
+    "build:rt:use_builtins_rt": "asc assembly/massa-sc-runtime/use_builtins_rt.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/use_builtins_rt.wasm",
     "build_rt": "run-s build:rt:*",
     "build_massa": "run-s build:*",
     "build": "run-s build_*"
