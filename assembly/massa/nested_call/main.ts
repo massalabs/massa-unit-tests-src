@@ -10,7 +10,7 @@
 import {createSC, fileToBase64, generateEvent, print} from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
-    const bytes = fileToBase64('../build/massa/test.wasm');
+    const bytes = fileToBase64('../../../build/massa/test.wasm');
     const address = createSC(bytes);
     generateEvent(address.toByteString());
     print("main:" + address.toByteString());
