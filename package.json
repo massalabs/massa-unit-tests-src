@@ -31,7 +31,7 @@
     "build_:rt:send_message_2": "asc assembly/massa-sc-runtime/send_message.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/send_message.wasm",
     "build:rt:send_message": "run-s build_:rt:send_message_*",
     "build:rt:op_fn": "asc assembly/massa-sc-runtime/op_fn.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/op_fn.wasm",
-    "build:rt:use_builtins_rt": "asc assembly/massa-sc-runtime/use_builtins_rt.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/use_builtins_rt.wasm",
+    "build:rt:use_builtins": "asc assembly/massa-sc-runtime/use_builtins.ts --transform mscl-as-transformer --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/use_builtins.wasm",
     "build_rt": "run-s build:rt:*",
     "build_massa": "run-s build:*",
     "build": "run-s build_*"
