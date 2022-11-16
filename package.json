@@ -38,12 +38,12 @@
     "build": "run-s build_*"
   },
   "devDependencies": {
-    "@massalabs/massa-as-sdk": "^1.1.0",
     "@massalabs/as": "^1.0.0",
+    "@massalabs/as-transformer": "^0.0.2-dev",
+    "@massalabs/massa-as-sdk": "^1.1.0",
     "assemblyscript": "^0.21.2",
     "json-as": "^0.4.9",
-    "visitor-as": "^0.10.2",
     "npm-run-all": "^4.1.5",
-    "@massalabs/as-transformer": "^0.0.2-dev"
+    "visitor-as": "^0.10.2"
   }
 }

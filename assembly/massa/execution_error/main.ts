@@ -1,7 +1,9 @@
-import { generateEvent, call, Address } from "@massalabs/massa-as-sdk";
+import { generateEvent, call, Address, Args } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
     let addr = new Address("invalid_addr");
-    call(addr, "invalid_func", "invalid_param", 42);
+    let args = new Args();
+    args.add("invalid_param");
+    call(addr, "invalid_func", args, 42);
     generateEvent("Hello world!");
 }
