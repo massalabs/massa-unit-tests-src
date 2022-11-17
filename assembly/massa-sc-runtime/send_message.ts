@@ -8,6 +8,10 @@ import { sendMessage, print, createSC, fileToBase64 } from "@massalabs/massa-as-
 export function main(name: string): void {
     const bytes = fileToBase64('./build/massa-sc-runtime/receive_message.wasm');
     const address = createSC(bytes);
-    sendMessage(address, "receive", 1, 1, 20, 20, 100_000, 1, 100, "hello my good friend!");
+    const message = new StaticArray<u8>(42);
+    for (let i = 0; i < 42; i++) {
+        message[i] = i;
+    }
+    sendMessage(address, "receive", 1, 1, 20, 20, 100_000, 1, 100, message);
     print("receiver created and message sent")
 }

@@ -5,5 +5,5 @@ export function main(): void {
   let args = new Args();
   args.add("you");
   let string_from = call(addr, "helloName", args, 0);
-  print(string_from);
+  print(string_from.toString());
 }
