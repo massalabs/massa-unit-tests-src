@@ -7,10 +7,14 @@
  * which is ready to be send on Massa network node!
  **/
 
-import {Storage} from "@massalabs/massa-as-sdk";
+import { Storage } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
-    Storage.set("TEST", "TEST_VALUE");
-    Storage.set("TEST2", "TEST_VALUE2");
-    Storage.del("TEST2");
+    const key1 = new StaticArray<u8>(4).fill(1, 0, 4);
+    const key2 = new StaticArray<u8>(4).fill(2, 0, 4);
+    const value1 = new StaticArray<u8>(4).fill(21, 0, 4);
+    const value2 = new StaticArray<u8>(4).fill(42, 0, 4);
+    Storage.set(key1, value1);
+    Storage.set(key2, value2);
+    Storage.del(key2);
 }

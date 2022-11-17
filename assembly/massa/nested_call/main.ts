@@ -7,11 +7,16 @@
  * which is ready to be send on Massa network node!
  **/
 
-import {createSC, fileToBase64, generateEvent, print} from "@massalabs/massa-as-sdk";
+import {createSC, generateEvent, getOpData, getOpKeys, print} from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
-    const bytes = fileToBase64('./build/massa/test.wasm');
-    const address = createSC(bytes);
-    generateEvent(address.toByteString());
-    print("main:" + address.toByteString());
+   // Create every SC available in the ExecuteSC operation datastore
+   const keys = getOpKeys();
+   keys.forEach(function (key) {
+       const bytecode = getOpData(key);
+       const address = createSC(bytecode);
+       generateEvent(address.toByteString());
+       print("main:" + address.toByteString());
+   });
+   
 }

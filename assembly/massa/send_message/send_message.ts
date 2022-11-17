@@ -3,12 +3,17 @@
  * function and sends an asynchronous message to that same SC
  **/
 
-import { sendMessage, print, createSC, fileToBase64 } from "@massalabs/massa-as-sdk"
+import { sendMessage, print, createSC, getOpKeys, getOpData } from "@massalabs/massa-as-sdk"
 
 export function main(name: string): void {
-
-    const bytes = fileToBase64('./build/massa/receive_message.wasm');
-    const address = createSC(bytes);
-    sendMessage(address, "receive", 1, 1, 20, 1, 100_000, 1, 100, "hello my good friend!");
-    print("receiver created and message sent")
+    // Create every SC available in the ExecuteSC operation datastore
+    // Send an asynchronous message to every created SC
+    const keys = getOpKeys();
+    keys.forEach(function (key) {
+        const bytecode = getOpData(key);
+        const address = createSC(bytecode);
+        const message = new StaticArray<u8>(4).fill(42, 0, 4);
+        sendMessage(address, "receive", 1, 1, 20, 20, 100_000, 1, 100, message);
+    });
+    print("receivers created and messages sent")
 }
