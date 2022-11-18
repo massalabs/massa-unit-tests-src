@@ -7,11 +7,13 @@
  * which is ready to be send on Massa network node!
  **/
 
-import { fileToBase64, getOpData, getOpKeys, Storage } from "@massalabs/massa-as-sdk";
+import { getOpData, getOpKeys, Storage } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
-    // Store the first SC available in the ExecuteSC operation datastore
+    // Store every SC available in the ExecuteSC operation datastore overriding the previous one
     const keys = getOpKeys();
-    const bytecode = getOpData(keys[0]);
-    Storage.setBytecode(bytecode);
+    keys.forEach(function (key) {
+        const bytecode = getOpData(key);
+        Storage.setBytecode(bytecode);
+    });
 }

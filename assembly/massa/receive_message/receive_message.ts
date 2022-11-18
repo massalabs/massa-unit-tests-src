@@ -4,8 +4,8 @@
 
 import { print, generateEvent } from "@massalabs/massa-as-sdk"
 
-export function receive(data: string): void {
-    let response: string = "message received: " + data;
+export function receive(data: StaticArray<u8>): void {
+    let response: string = "message correctly received: " + data.toString();
     generateEvent(response);
     print(response);
 }
