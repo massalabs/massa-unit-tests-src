@@ -35,6 +35,7 @@
     "build:rt:gc_abi_call_basic": "asc assembly/massa-sc-runtime/gc_abi_call_basic.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/gc_abi_call_basic.wasm",
     "build:rt:gc_abi_call_for": "asc assembly/massa-sc-runtime/gc_abi_call_for.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/gc_abi_call_for.wasm",
     "build:rt:gc_op_basic": "asc assembly/massa-sc-runtime/gc_op_basic.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/gc_op_basic.wasm",
+    "build:rt:gc_abi_call_param_size": "asc assembly/massa-sc-runtime/gc_abi_call_param_size.ts --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/gc_abi_call_param_size.wasm",
     "build:rt:use_builtins": "asc assembly/massa-sc-runtime/use_builtins.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/use_builtins.wasm",
     "build_rt": "run-s build:rt:*",
     "build_massa": "run-s build:*",
