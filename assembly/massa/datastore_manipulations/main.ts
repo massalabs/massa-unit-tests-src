@@ -7,9 +7,10 @@
  * which is ready to be send on Massa network node!
  **/
 
-import { Storage } from "@massalabs/massa-as-sdk";
+import {Storage, getKeys, generateEvent, Context, print} from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
+
     const key1 = new StaticArray<u8>(4).fill(1, 0, 4);
     const key2 = new StaticArray<u8>(4).fill(2, 0, 4);
     const value1 = new StaticArray<u8>(4).fill(21, 0, 4);
@@ -17,4 +18,11 @@ export function main(_args: string): void {
     Storage.set(key1, value1);
     Storage.set(key2, value2);
     Storage.del(key2);
+
+    let addr_ = Context.callee();
+    let addr = addr_.toByteString();
+    let keys = getKeys();
+    let msg = `keys: ${keys}`;
+    generateEvent(msg);
 }
+
