@@ -33,7 +33,12 @@
     "build:rt:send_message": "run-s build_:rt:send_message_*",
     "build:rt:op_fn": "asc assembly/massa-sc-runtime/op_fn.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/op_fn.wasm",
     "build:rt:use_builtins": "asc assembly/massa-sc-runtime/use_builtins.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/use_builtins.wasm",
+    "build:as:get_buffer": "asc assembly/as-ffi-bindings/get_buffer.ts --target release --exportRuntime --runtime stub --outFile build/as-ffi-bindings/get_buffer.wasm",
+    "build:as:sort_buffer": "asc assembly/as-ffi-bindings/sort_buffer.ts --target release --exportRuntime --runtime stub --outFile build/as-ffi-bindings/sort_buffer.wasm",
+    "build:as:get_string": "asc assembly/as-ffi-bindings/get_string.ts --target release --exportRuntime --runtime stub --outFile build/as-ffi-bindings/get_string.wasm",
+    "build:as:abort": "asc assembly/as-ffi-bindings/abort.ts --target release --exportRuntime --runtime stub --outFile build/as-ffi-bindings/abort.wasm",
     "build_rt": "run-s build:rt:*",
+    "build_as": "run-s build:as:*",
     "build_massa": "run-s build:*",
     "build": "run-s build_*"
   },
