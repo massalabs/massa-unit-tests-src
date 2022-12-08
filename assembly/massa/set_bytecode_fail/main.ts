@@ -7,9 +7,13 @@
  * which is ready to be send on Massa network node!
  **/
 
-import {fileToBase64, Storage} from "@massalabs/massa-as-sdk";
+import { getOpData, getOpKeys, Storage } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
-    const bytes = fileToBase64("./build/massa/smart-contract.wasm");
-    Storage.setBytecode(bytes.toString());
+    // Store every SC available in the ExecuteSC operation datastore overriding the previous one
+    const keys = getOpKeys();
+    keys.forEach(function (key) {
+        const bytecode = getOpData(key);
+        Storage.setBytecode(bytecode);
+    });
 }

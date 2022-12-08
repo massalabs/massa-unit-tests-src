@@ -1,8 +1,12 @@
-import { createSC, fileToBase64 } from "@massalabs/massa-as-sdk";
+import { createSC, getOpData, getOpKeys, print } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): i32 {
-    // Create smart contract "get_string"
-    const bytes = fileToBase64('./build/massa-sc-runtime/get_string.wasm');
-    createSC(bytes);
+    // Create every SC available in the ExecuteSC operation datastore
+    const keys = getOpKeys();
+    keys.forEach(function (key) {
+        const bytecode = getOpData(key);
+        const address = createSC(bytecode);
+        print(address.toByteString());
+    });
     return 0;
 }
