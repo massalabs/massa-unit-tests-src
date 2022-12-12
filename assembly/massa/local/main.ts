@@ -1,4 +1,4 @@
-import { generateEvent, Address, Args, local_call, local_execution } from "@massalabs/massa-as-sdk";
+import { generateEvent, Address, Args, local_call } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
     let addr = new Address("addr");
