@@ -1,10 +1,14 @@
-import { generateEvent, Address, Args, local_call } from "@massalabs/massa-as-sdk";
+import { generateEvent, Args, local_execution, getOpKeys, getOpData, fromBytes, toBytes } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
-    let addr = new Address("addr");
-    let args = new Args();
     generateEvent("event generated before the sc");
-    args.add("param");
-    local_call(addr, "unc", args);
+    const keys = getOpKeys();
+    keys.forEach(function (key) {
+        let args = new Args();``
+        args.add("useless message");
+        const bytecode = getOpData(key);
+        local_execution(bytecode, "receive", args);
+        generateEvent("one local execution completed");
+    });
     generateEvent("event generated after the sc");
 }
