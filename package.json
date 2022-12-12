@@ -10,6 +10,7 @@
     "build:datastore": "asc assembly/massa/datastore/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/datastore.wasm",
     "build:datastore_manipulations": "asc assembly/massa/datastore_manipulations/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/datastore_manipulations.wasm",
     "build:execution_error": "asc assembly/massa/execution_error/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/execution_error.wasm",
+    "build:local": "asc assembly/massa/local/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/local.wasm",
     "build_:send_message_1": "asc assembly/massa/receive_message/receive_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/receive_message.wasm",
     "build_:send_message_2": "asc assembly/massa/send_message/send_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_message.wasm",
     "build:send_message": "run-s build_:send_message_*",
