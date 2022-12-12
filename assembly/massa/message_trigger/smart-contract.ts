@@ -1,6 +1,3 @@
-/* Age SC Implementation for Massa Labs
- *
- * */
 import { sendMessage, Context, currentPeriod, currentThread, Args, generateEvent, Address, toBytes } from "@massalabs/massa-as-sdk";
 
 export function test(_args: StaticArray<u8>): void {

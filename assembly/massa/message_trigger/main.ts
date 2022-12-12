@@ -1,6 +1,7 @@
 import { generateEvent, createSC, call, Address, Args, getOpData, toBytes } from "@massalabs/massa-as-sdk";
 
 function createContract(): Address {
+    // Source of this SC is in assembly/massa/message_trigger/smart-contract.ts
     const bytes: StaticArray<u8> = getOpData(toBytes("smart-contract"));
     const sc_address = createSC(bytes);
     return sc_address;
