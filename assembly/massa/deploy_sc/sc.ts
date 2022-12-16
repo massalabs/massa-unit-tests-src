@@ -1,6 +1,6 @@
 import { callerHasWriteAccess, generateEvent } from "@massalabs/massa-as-sdk";
 
-export function constructor(): void {
+export function constructor(_args: StaticArray<u8>): void {
     if (callerHasWriteAccess()) {
         generateEvent("constructor called by deployer");
     } else {
@@ -8,6 +8,6 @@ export function constructor(): void {
     }
 }
 
-export function ping(): void {
+export function ping(_args: StaticArray<u8>): void {
     generateEvent("pong");
 }
