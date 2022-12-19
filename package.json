@@ -13,6 +13,8 @@
     "build:local_function": "asc assembly/massa/local_call/local_function.ts --target release --exportRuntime --runtime stub --outFile build/massa/local_function.wasm",
     "build:local_call": "asc assembly/massa/local_call/main.ts --target release --exportRuntime --runtime stub --outFile build/massa/local_call.wasm",
     "build:local_execution": "asc assembly/massa/local_execution/main.ts --target release --exportRuntime --runtime stub --outFile build/massa/local_execution.wasm",
+    "build:deploy_sc": "asc assembly/massa/deploy_sc/deployer.ts --target release --exportRuntime --runtime stub --outFile build/massa/deploy_sc.wasm",
+    "build:init_sc": "asc assembly/massa/deploy_sc/sc.ts --target release --exportRuntime --runtime stub --outFile build/massa/init_sc.wasm",
     "build_:send_message_basic_1": "asc assembly/massa/receive_message/receive_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/receive_message.wasm",
     "build_:send_message_basic_2": "asc assembly/massa/send_message/send_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_message.wasm",
     "build:send_message": "run-s build_:send_message_basic_*",
@@ -48,7 +50,7 @@
   "devDependencies": {
     "@massalabs/as": "1.1.1-dev.20221215083749",
     "@massalabs/as-transformer": "^0.0.2-dev",
-    "@massalabs/massa-as-sdk": "1.2.1-dev.20221215100358",
+    "@massalabs/massa-as-sdk": "1.2.1-dev.20221219130704",
     "assemblyscript": "^0.21.2",
     "json-as": "^0.4.9",
     "npm-run-all": "^4.1.5",
