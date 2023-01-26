@@ -2,7 +2,8 @@
  * Smart contract containing a message handler function
  **/
 
-import { print, generateEvent, call, Context, Address, Args } from "@massalabs/massa-as-sdk"
+import { print, generateEvent, call, Context, Address } from "@massalabs/massa-as-sdk"
+import { Args } from '@massalabs/as-types';
 
 export function receive(data: string): void {
     print("Gas at start inner: " + Context.remainingGas().toString());

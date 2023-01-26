@@ -1,4 +1,5 @@
-import { generateEvent, Args, getOpKeys, getOpData, createSC, localCall } from "@massalabs/massa-as-sdk";
+import { generateEvent, getOpKeys, getOpData, createSC, localCall } from "@massalabs/massa-as-sdk";
+import { Args } from '@massalabs/as-types';
 
 export function main(_args: string): void {
     generateEvent("event generated before the sc");

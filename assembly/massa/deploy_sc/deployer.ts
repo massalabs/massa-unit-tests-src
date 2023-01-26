@@ -1,4 +1,5 @@
-import { generateEvent, Args, getOpKeys, getOpData, createSC, call, functionExists } from "@massalabs/massa-as-sdk";
+import { generateEvent, getOpKeys, getOpData, createSC, call, functionExists } from "@massalabs/massa-as-sdk";
+import { Args } from '@massalabs/as-types';
 
 export function main(): void {
     const keys = getOpKeys();

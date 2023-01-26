@@ -1,4 +1,5 @@
-import { generateEvent, createSC, call, Address, Args, getOpData, toBytes } from "@massalabs/massa-as-sdk";
+import { generateEvent, createSC, call, Address, getOpData, toBytes } from "@massalabs/massa-as-sdk";
+import { Args } from '@massalabs/as-types';
 
 function createContract(): Address {
     // Source of this SC is in assembly/massa/message_trigger/smart-contract.ts
