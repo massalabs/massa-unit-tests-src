@@ -1,4 +1,5 @@
-import { sendMessage, Context, currentPeriod, currentThread, Args, generateEvent, Address, toBytes } from "@massalabs/massa-as-sdk";
+import { sendMessage, Context, currentPeriod, currentThread, generateEvent, Address, toBytes } from "@massalabs/massa-as-sdk";
+import { Args } from '@massalabs/as-types';
 
 export function test(_args: StaticArray<u8>): void {
     let period = currentPeriod();

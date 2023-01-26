@@ -2,7 +2,8 @@
    could be executed witthout being initialized.
 */
 
-import { print, call, Address, Args } from "@massalabs/massa-as-sdk";
+import { print, call, Address } from "@massalabs/massa-as-sdk";
+import { Args } from '@massalabs/as-types';
 
 let addr = new Address("jCcqGSAVh9BR5icEk8icdvEqeNZzvsPK4xZK9Fm5PaWFab48X");
 let args = new Args();
