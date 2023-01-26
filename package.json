@@ -30,6 +30,8 @@
     "build_:nested_call_2": "asc assembly/massa/nested_call/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/nested_call.wasm",
     "build:nested_call": "run-s build_:nested_call_*",
     "build:use_builtins": "asc assembly/massa/use_builtins/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/use_builtins.wasm",
+    "build:rt:basic_main": "asc assembly/massa-sc-runtime/basic_main.ts --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/basic_main.wasm",
+    "build:rt:basic_func": "asc assembly/massa-sc-runtime/basic_func.ts --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/basic_func.wasm",
     "build:rt:empty_main": "asc assembly/massa-sc-runtime/empty_main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/empty_main.wasm",
     "build:rt:no_main": "asc assembly/massa-sc-runtime/no_main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/no_main.wasm",
     "build:rt:op_fn": "asc assembly/massa-sc-runtime/op_fn.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/op_fn.wasm",
