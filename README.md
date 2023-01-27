@@ -5,7 +5,7 @@ A collection of SC for unit testing massa & massa-sc-runtime
 ## Setup
 
 `
-npm install  
+npm install
 `
 
 ## Build
