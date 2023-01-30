@@ -40,9 +40,6 @@
     "build:rt:gc_op_basic": "asc assembly/massa-sc-runtime/gc_op_basic.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/gc_op_basic.wasm",
     "build:rt:gc_abi_call_param_size": "asc assembly/massa-sc-runtime/gc_abi_call_param_size.ts --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/gc_abi_call_param_size.wasm",
     "build:rt:use_builtins": "asc assembly/massa-sc-runtime/use_builtins.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/use_builtins.wasm",
-    "build:rt:use_builtin_assert": "asc assembly/massa-sc-runtime/use_builtin_assert.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/use_builtin_assert.wasm",
-    "build:rt:use_builtin_exit": "asc assembly/massa-sc-runtime/use_builtin_exit.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/use_builtin_exit.wasm",
-    "build:rt:unsupported_builtin_hrtime": "asc assembly/massa-sc-runtime/unsupported_builtin_hrtime.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/unsupported_builtin_hrtime.wasm",
     "build:rt:simd": "asc assembly/massa-sc-runtime/simd.ts --target release --enable simd --exportRuntime --runtime stub --outFile build/massa-sc-runtime/simd.wasm",
     "build:rt:threads": "asc assembly/massa-sc-runtime/threads.ts --target release --enable threads --exportRuntime --runtime stub --outFile build/massa-sc-runtime/threads.wasm",
     "build:as:get_buffer": "asc assembly/as-ffi-bindings/get_buffer.ts --target release --exportRuntime --runtime stub --outFile build/as-ffi-bindings/get_buffer.wasm",
@@ -56,12 +53,12 @@
   },
   "devDependencies": {
     "@massalabs/as": "1.1.1-dev.20221215083749",
-    "@massalabs/as-transformer": "^0.0.2-dev",
-    "@massalabs/as-types": "^0.0.2-dev",
+    "@massalabs/as-transformer": "^0.1.2",
+    "@massalabs/as-types": "^0.0.2",
     "@massalabs/massa-as-sdk": "massalabs/massa-as-sdk#51323cc309d4c3dae4d2efca956be62724ceb011",
-    "assemblyscript": "^0.21.2",
+    "assemblyscript": "^0.25",
     "json-as": "^0.4.9",
     "npm-run-all": "^4.1.5",
-    "visitor-as": "^0.10.2"
+    "visitor-as": "^0.11.4"
   }
 }
