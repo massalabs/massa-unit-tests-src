@@ -19,5 +19,5 @@ export function main(): void {
     // let t: i64 = process.time();
 
     // abort - it should end the program
-    abort("abord with date and rnd", "use_builtins.ts");
+    abort("Manual abort. 'Date.now' UTC timestamp (ms) = " + now.toString(), "use_builtins.ts");
 }
