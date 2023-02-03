@@ -4,6 +4,10 @@ export function main(): void {
     seed();
     let now: i64 = Date.now();
     console.log("Hello there!");
+    console.debug("I'm debug msg");
+    console.info("i am info msg");
+    console.warn("Care, i'm warning");
+    console.error("something went wrong");
 
     // trace
     trace("foo");
