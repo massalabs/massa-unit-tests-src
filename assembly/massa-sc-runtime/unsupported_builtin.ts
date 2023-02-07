@@ -3,4 +3,9 @@ export function main(): void {
     // Note: hrtime obtains the system's monotonic high resolution time
     //       this is not compatible with deterministic execution so we do not support it
     let hrt: u64 = process.hrtime();
+
+
+    // getRandomValues are not supported because it is not determinist
+    const array = new Uint8Array(10);
+    crypto.getRandomValues(array);
 }

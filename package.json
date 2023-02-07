@@ -40,6 +40,7 @@
     "build:rt:gc_op_basic": "asc assembly/massa-sc-runtime/gc_op_basic.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/gc_op_basic.wasm",
     "build:rt:gc_abi_call_param_size": "asc assembly/massa-sc-runtime/gc_abi_call_param_size.ts --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/gc_abi_call_param_size.wasm",
     "build:rt:use_builtins": "asc assembly/massa-sc-runtime/use_builtins.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/use_builtins.wasm",
+    "build:rt:unsupported_builtin": "asc assembly/massa-sc-runtime/unsupported_builtin.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa-sc-runtime/unsupported_builtin.wasm",
     "build:rt:simd": "asc assembly/massa-sc-runtime/simd.ts --target release --enable simd --exportRuntime --runtime stub --outFile build/massa-sc-runtime/simd.wasm",
     "build:rt:threads": "asc assembly/massa-sc-runtime/threads.ts --target release --enable threads --exportRuntime --runtime stub --outFile build/massa-sc-runtime/threads.wasm",
     "build:rt:return_basic": "asc assembly/massa-sc-runtime/return_basic.ts --target release --enable threads --exportRuntime --runtime stub --outFile build/massa-sc-runtime/return_basic.wasm",
