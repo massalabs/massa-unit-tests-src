@@ -7,7 +7,7 @@
  * which is ready to be send on Massa network node!
  **/
 
-import {Storage, getKeys, getKeysOf, generateEvent, Context, print} from "@massalabs/massa-as-sdk";
+import { Storage, getKeys, getKeysOf, generateEvent, Context, print } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
 
@@ -25,7 +25,7 @@ export function main(_args: string): void {
     generateEvent(msg);
 
     let addr_ = Context.callee();
-    let addr = addr_.toByteString();
+    let addr = addr_.toString();
     let keys2 = getKeysOf(addr);
     let msg2 = `keys2: ${keys2}`;
     // print(msg2);
