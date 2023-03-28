@@ -7,15 +7,15 @@
  * which is ready to be send on Massa network node!
  **/
 
-import {createSC, generateEvent, getOpData, getOpKeys} from "@massalabs/massa-as-sdk";
+import { createSC, generateEvent, getOpData, getOpKeys } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
-   // Create every SC available in the ExecuteSC operation datastore
-   const keys = getOpKeys();
-   keys.forEach(function (key) {
-       const bytecode = getOpData(key);
-       const address = createSC(bytecode);
-       generateEvent(address.toByteString());
-   });
-   
+    // Create every SC available in the ExecuteSC operation datastore
+    const keys = getOpKeys();
+    keys.forEach(function (key) {
+        const bytecode = getOpData(key);
+        const address = createSC(bytecode);
+        generateEvent(address.toString());
+    });
+
 }

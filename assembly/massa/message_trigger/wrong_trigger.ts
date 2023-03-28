@@ -1,7 +1,8 @@
-import { Context, generateEvent, Storage, toBytes } from "@massalabs/massa-as-sdk";
+import { stringToBytes } from '@massalabs/as-types';
+import { Context, generateEvent, Storage } from "@massalabs/massa-as-sdk";
 
 export function main(_args: StaticArray<u8>): void {
-    generateEvent(`Trigger on ${Context.callee().toByteString()}`);
-    Storage.set(toBytes("test"), toBytes("test"));
+    generateEvent(`Trigger on ${Context.callee().toString()}`);
+    Storage.set(stringToBytes("test"), stringToBytes("test"));
     return;
 }
