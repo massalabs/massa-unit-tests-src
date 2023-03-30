@@ -30,7 +30,7 @@ export function main(_args: string): void {
     let msg2 = `keys2: ${keys2}`;
     // print(msg2);
     generateEvent(msg2);
-    assert(keys2.length == 2);
+    assert(keys2.length == 1);
 
     // Test using key prefixes
     const key3: StaticArray<u8> = [2, 0, 254, 255];
