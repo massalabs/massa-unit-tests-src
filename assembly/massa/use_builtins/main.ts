@@ -2,5 +2,5 @@
 export function main(): void {
     seed();
     Date.now();
-    abort("abord with date and rnd", "use_builtins.ts");
+    abort("Manual abort with date and rnd", "use_builtins.ts");
 }
