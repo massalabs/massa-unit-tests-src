@@ -11,7 +11,7 @@ import { getOpData, getOpKeys, Storage, setBytecode } from "@massalabs/massa-as-
 
 export function main(_args: string): void {
     // Store every SC available in the ExecuteSC operation datastore overriding the previous one
-    const keys = getOpKeys(new StaticArray<u8>(0));
+    const keys = getOpKeys();
     keys.forEach(function (key) {
         const bytecode = getOpData(key);
         setBytecode(bytecode);

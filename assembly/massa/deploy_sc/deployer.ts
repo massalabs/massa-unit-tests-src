@@ -2,7 +2,7 @@ import { generateEvent, getOpKeys, getOpData, createSC, call, functionExists } f
 import { Args } from '@massalabs/as-types';
 
 export function main(): void {
-    const keys = getOpKeys(new StaticArray<u8>(0));
+    const keys = getOpKeys();
 
     keys.forEach(function (key) {
         const bytecode = getOpData(key);

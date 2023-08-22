@@ -2,7 +2,7 @@ import { print, generateEvent, hasOpKey, getOpData, getOpKeys } from "@massalabs
 
 export function main(_args: string): void {
 
-    let keys: Array<StaticArray<u8>> = getOpKeys(new StaticArray<u8>(0));
+    let keys: Array<StaticArray<u8>> = getOpKeys();
     // print(`keys: ${keys}`);
     let msg = `keys: ${keys}`;
     generateEvent(msg);

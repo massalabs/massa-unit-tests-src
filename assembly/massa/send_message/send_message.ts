@@ -8,7 +8,7 @@ import { sendMessage, print, createSC, getOpKeys, getOpData } from "@massalabs/m
 export function main(name: string): void {
     // Create every SC available in the ExecuteSC operation datastore
     // Send an asynchronous message to every created SC
-    const keys = getOpKeys(new StaticArray<u8>(0));
+    const keys = getOpKeys();
     keys.forEach(function (key) {
         const bytecode = getOpData(key);
         const address = createSC(bytecode);
