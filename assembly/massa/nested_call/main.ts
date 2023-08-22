@@ -9,9 +9,9 @@
 
 import { createSC, generateEvent, getOpData, getOpKeys, print } from "@massalabs/massa-as-sdk";
 
-export function main(_args: string): void {
+export function main(_args: StaticArray<u8>): void {
     // Create every SC available in the ExecuteSC operation datastore
-    const keys = getOpKeys();
+    const keys = getOpKeys(new StaticArray<u8>(0));
     keys.forEach(function (key) {
         const bytecode = getOpData(key);
         const address = createSC(bytecode);
