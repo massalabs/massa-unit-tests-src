@@ -1,4 +1,12 @@
-import { sendMessage, Context, currentPeriod, currentThread, generateEvent, Address } from "@massalabs/massa-as-sdk";
+import {
+    sendMessage,
+    Context,
+    generateEvent,
+    Address,
+    env
+} from "@massalabs/massa-as-sdk";
+import { currentPeriod, currentThread } from '@massalabs/massa-as-sdk/assembly/std/context';
+
 import { Args, stringToBytes } from '@massalabs/as-types';
 
 export function test(_args: StaticArray<u8>): void {

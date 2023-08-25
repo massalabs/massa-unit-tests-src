@@ -1,4 +1,10 @@
-import {getOpKeys, hasOpKey, getOpData, print, getOpKeysPrefix} from "@massalabs/massa-as-sdk";
+import {
+    getOpKeys,
+    hasOpKey,
+    getOpData,
+    print,
+    getOpKeysPrefix
+} from "@massalabs/massa-as-sdk";
 // import { generateEvent } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
