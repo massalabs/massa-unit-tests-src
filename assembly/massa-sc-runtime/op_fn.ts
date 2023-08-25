@@ -1,8 +1,15 @@
-import { getOpKeys, hasOpKey, getOpData, print } from "@massalabs/massa-as-sdk";
+import {
+    getOpKeys,
+    hasOpKey,
+    getOpData,
+    print,
+    getOpKeysPrefix
+} from "@massalabs/massa-as-sdk";
 // import { generateEvent } from "@massalabs/massa-as-sdk";
 
 export function main(_args: string): void {
 
+    // without prefix
     let keys: Array<StaticArray<u8>> = getOpKeys();
     // generateEvent(`keys len: ${keys.length}`);
     if (keys.length != 3) {
@@ -25,5 +32,14 @@ export function main(_args: string): void {
             print(msg);
             // generateEvent(msg);
         }
+    }
+
+    // with prefix
+    let _prefix: Array<u8> = [127];
+    let prefix = StaticArray.fromArray(_prefix);
+    let keys2: Array<StaticArray<u8>> = getOpKeysPrefix(prefix);
+    // generateEvent(`keys len: ${keys.length}`);
+    if (keys2.length != 1) {
+        abort!(`Expect keys length to be == 2 ano not: ${keys.length}`);
     }
 }
