@@ -13,7 +13,7 @@ export function main(name: string): void {
         const bytecode = getOpData(key);
         const address = createSC(bytecode);
         const message = new StaticArray<u8>(4).fill(42, 0, 4);
-        sendMessage(address, "receive", 1, 1, 20, 20, 100_000, 1, 100, message);
+        sendMessage(address, "receive", 1, 1, 20, 20, 3_000_000, 1, 100, message);
     });
     print("receivers created and messages sent")
 }
