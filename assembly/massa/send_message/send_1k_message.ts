@@ -21,7 +21,7 @@ export function main(name: string): void {
     const message = new StaticArray<u8>(4).fill(42, 0, 4);
     print("try to send 1000 async messages");
     for (let i = 0; i < 1000; i++) {
-      sendMessage(address, "receive", 1, 1, 20, 20, 2_200_000, 1, 1, message);
+      sendMessage(address, "receive", 1, 1, 20, 20, 2_100_000, 1, 1, message);
     }
   });
   print("receivers created and messages sent");

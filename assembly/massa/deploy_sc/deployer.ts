@@ -13,5 +13,7 @@ export function main(): void {
             generateEvent("constructor exists and will be called");
             call(address, "constructor", new Args(), 0);
         }
+
+        generateEvent("sc created at address: " + address.toString());
     });
 }

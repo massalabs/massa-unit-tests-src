@@ -3,14 +3,12 @@
  * function and sends an asynchronous message to that same SC
  **/
 
-import { Args } from "@massalabs/as-types";
 import {
-  call,
+  sendMessage,
   print,
   createSC,
   getOpKeys,
   getOpData,
-  generateEvent,
 } from "@massalabs/massa-as-sdk";
 
 export function main(name: string): void {
@@ -21,16 +19,9 @@ export function main(name: string): void {
     const bytecode = getOpData(key);
     const address = createSC(bytecode);
     const message = new StaticArray<u8>(4).fill(42, 0, 4);
-    const args = new Args();
-    args.add(message);
-    print("try to call a sc 1000 times");
+    print("try to send 1000 async messages with NO GAS");
     for (let i = 0; i < 1000; i++) {
-      call(
-        address,
-        "receive",
-        args,
-        1,
-      );
+      sendMessage(address, "receive", 1, 1, 20, 20, 0, 1, 1, message);
     }
   });
   print("receivers created and messages sent");
