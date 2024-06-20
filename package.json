@@ -26,6 +26,7 @@
     "build_:send_message_basic_2": "asc assembly/massa/send_message/send_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_message.wasm",
     "build_:send_message_basic_3": "asc assembly/massa/send_message/send_1k_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_1k_message.wasm",
     "build_:send_message_basic_4": "asc assembly/massa/send_message/send_1k_message_no_gas.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_1k_message_no_gas.wasm",
+    "build_:send_message_basic_5": "asc assembly/massa/send_message/send_message_expired.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_message_expired.wasm",
     "build:send_message": "run-s build_:send_message_basic_*",
     "build_:send_message_condition_sc": "asc assembly/massa/message_trigger/smart-contract.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_message_condition.wasm",
     "build_:send_message_condition_deployer": "asc assembly/massa/message_trigger/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_message_condition_deployer.wasm",
