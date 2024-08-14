@@ -22,6 +22,8 @@
     "build_:call_sc_1k_times": "asc assembly/massa/call_sc/call_sc_1k_times.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/call_sc_1k_times.wasm",
     "build_:call_sc_once": "asc assembly/massa/call_sc/call_sc_once.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/call_sc_once.wasm",
     "build:call_sc": "run-s build_:call_sc_*",
+    "build:deferred_call_register": "asc assembly/massa/deferred_call/register.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/deferred_call_register.wasm",
+    "build:deferred_call_register_fail": "asc assembly/massa/deferred_call/register_fail.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/deferred_call_register_fail.wasm",
     "build_:send_message_basic_1": "asc assembly/massa/receive_message/receive_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/receive_message.wasm",
     "build_:send_message_basic_2": "asc assembly/massa/send_message/send_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_message.wasm",
     "build_:send_message_basic_3": "asc assembly/massa/send_message/send_1k_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_1k_message.wasm",
@@ -68,11 +70,11 @@
   },
   "devDependencies": {
     "@massalabs/as": "1.1.1-dev.20221215083749",
-    "@massalabs/as-transformer": "^0.1.2",
-    "@massalabs/as-types": "^0.0.3-dev",
-    "@massalabs/massa-as-sdk": "^2.5.3",
+    "@massalabs/as-transformer": "^0.4.0",
+    "@massalabs/as-types": "^2.1.0",
+    "@massalabs/massa-as-sdk": "git+https://github.com/massalabs/massa-as-sdk#70b7602",
     "assemblyscript": "^0.25",
-    "json-as": "^0.4.9",
+    "json-as": "^0.9.0",
     "npm-run-all": "^4.1.5",
     "visitor-as": "^0.11.4"
   }
