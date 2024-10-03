@@ -72,7 +72,7 @@
     "@massalabs/as": "1.1.1-dev.20221215083749",
     "@massalabs/as-transformer": "^0.4.0",
     "@massalabs/as-types": "^2.1.0",
-    "@massalabs/massa-as-sdk": "git+https://github.com/massalabs/massa-as-sdk#c301db1b9400e179f9ec1762fb59a0d14cf90f89",
+    "@massalabs/massa-as-sdk": "git+https://github.com/massalabs/massa-as-sdk#d4071afcd17f9601fc4550917365b2238e8ca53e",
     "assemblyscript": "^0.25",
     "json-as": "^0.9.0",
     "npm-run-all": "^4.1.5",
