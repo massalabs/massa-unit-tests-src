@@ -24,6 +24,7 @@
     "build:call_sc": "run-s build_:call_sc_*",
     "build:deferred_call_register": "asc assembly/massa/deferred_call/register.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/deferred_call_register.wasm",
     "build:deferred_call_register_fail": "asc assembly/massa/deferred_call/register_fail.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/deferred_call_register_fail.wasm",
+    "build:deferred_call_exists": "asc assembly/massa/deferred_call/exists.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/deferred_call_exists.wasm",
     "build_:send_message_basic_1": "asc assembly/massa/receive_message/receive_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/receive_message.wasm",
     "build_:send_message_basic_2": "asc assembly/massa/send_message/send_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_message.wasm",
     "build_:send_message_basic_3": "asc assembly/massa/send_message/send_1k_message.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/send_1k_message.wasm",
