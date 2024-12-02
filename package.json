@@ -12,6 +12,9 @@
     "build:datastore_manipulations": "asc assembly/massa/datastore_manipulations/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/datastore_manipulations.wasm",
     "build:validate_address": "asc assembly/massa/validate_address/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/validate_address.wasm",
     "build:execution_error": "asc assembly/massa/execution_error/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/execution_error.wasm",
+    "build:execution_trace": "asc assembly/massa/execution_trace/main.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/execution_trace.wasm",
+    "build:execution_trace_deploy": "asc assembly/massa/execution_trace/deployer.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/et_deploy_sc.wasm",
+    "build:execution_trace_init": "asc assembly/massa/execution_trace/sc.ts --transform json-as/transform --target release --exportRuntime --runtime stub --outFile build/massa/et_init_sc.wasm",
     "build:local_function": "asc assembly/massa/local_call/local_function.ts --target release --exportRuntime --runtime stub --outFile build/massa/local_function.wasm",
     "build:local_call": "asc assembly/massa/local_call/main.ts --target release --exportRuntime --runtime stub --outFile build/massa/local_call.wasm",
     "build:local_execution": "asc assembly/massa/local_execution/main.ts --target release --exportRuntime --runtime stub --outFile build/massa/local_execution.wasm",
@@ -75,5 +78,8 @@
     "json-as": "^0.4.9",
     "npm-run-all": "^4.1.5",
     "visitor-as": "^0.11.4"
+  },
+  "dependencies": {
+    "as-bignum": "^0.3.1"
   }
 }
