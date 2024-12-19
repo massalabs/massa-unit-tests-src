@@ -34,3 +34,10 @@ npm run build:rt:op_fn
 `
 npm run
 `
+
+### Specific build 1 (custom section)
+
+cd assembly/massa-sc-runtime
+cargo install wasm-custom-section
+./generate_wasm_with_custom_section.sh
+
