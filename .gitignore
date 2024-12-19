@@ -4,5 +4,9 @@ node_modules
 # AssemblyScript
 build
 
+# Generated from scripts
+assembly/massa-sc-runtime/custom_section/*.wasm
+
 # Jetbrains
 .idea
+

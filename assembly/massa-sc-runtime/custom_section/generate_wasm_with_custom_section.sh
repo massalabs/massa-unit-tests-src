@@ -28,6 +28,9 @@ wasm-custom-section ./simple-name.wasm add 3 < section_3_2.txt
 mv -v simple-name.wasm.out simple-name.wasm
 rm -v section_3_2.txt
 
+# Rename
+mv -v simple-name.wasm simple-custom-section.wasm
+
 # List custom sections
 echo "Custom sections (for simple-name.wasm):"
-wasm-custom-section simple-name.wasm list
+wasm-custom-section simple-custom-section.wasm list
