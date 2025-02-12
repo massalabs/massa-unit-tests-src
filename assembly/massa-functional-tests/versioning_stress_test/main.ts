@@ -39,7 +39,8 @@ function testEVMAbis(): void {
     
     generateEvent('testEVMAbis1' + bytesToString(pubkeyFromSignature));
     generateEvent('testEVMAbis2' + bytesToString(address));
-    generateEvent('testEVMAbis3' + isEvmSignatureValid(full_hash, signature, pubkeyFromSignature) ? 'true' : 'false');
+    let sig_valid =   isEvmSignatureValid(full_hash, signature, pubkeyFromSignature) ? 'true' : 'false';
+    generateEvent('testEVMAbis3' + sig_valid);
 }
 
 function testAsyncMessages(args: Args): void {
